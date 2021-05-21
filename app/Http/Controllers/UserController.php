@@ -3,18 +3,30 @@
 namespace App\Http\Controllers;
 
 use App\Models\Form;
+use Illuminate\Http\Request;
+use App\Models\User;
 
-class AdminController extends Controller
+class UserController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function index()
     {
         $calls = Form::query()
             ->orderByDesc('date')
             ->paginate(10);
 
-        return view('admin.index', [
+        return view('user.forms', [
             'calls' => $calls,
         ]);
+    }
+
+    public function show(User $user)
+    {
+        return view('user.index', compact('user'));
     }
 
     public function destroy($id)
@@ -23,10 +35,9 @@ class AdminController extends Controller
 
         $call->forceDelete();
 
-        return redirect()->route('admin.index', [
+        return redirect()->route('admin', [
             'id' => $id
         ]);
     }
-
 
 }

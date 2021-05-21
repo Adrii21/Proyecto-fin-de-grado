@@ -14,22 +14,16 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $this->admin();
-
-        User::factory()->times(2)->create();
-    }
-
-    public function admin()
-    {
         User::create([
             'name' =>'Adrián',
-            'surname' => 'kasjdk',
+            'surname' => 'Garcia',
             'department' => 'filo',
             'group' => 'A',
             'email' => 'adrian@mail.es',
             'password' => bcrypt('1234'),
         ]);
 
+        User::factory(2)->create();
     }
 
 }

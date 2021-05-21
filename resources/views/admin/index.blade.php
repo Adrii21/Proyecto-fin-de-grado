@@ -4,7 +4,7 @@
     <div class="container"><br><br><br>
         <div class="row justify-content-center">
             <div class="col-md-12">
-                    <div>{{ __('Vista de administrador') }}</div>
+                    <div><h4>{{ __('Vista de administrador') }}</h4></div>
                     <div>
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -32,7 +32,7 @@
                                 </tr>
                             </th>
                             <tbody class="text-light">
-                            @each('_row', $calls, 'call')
+                            @each('admin._row', $calls, 'call')
                             </tbody>
                         </table>
                     </div>

@@ -76,5 +76,10 @@
             @yield('content')
         </main>
     </div>
+    <footer class="footer py-4">
+        <div class="container">
+            <span class="text-muted">Proyecto de llamadas no contestadas realizado por Adrián García</span>
+        </div>
+    </footer>
 </body>
 </html>

@@ -8,18 +8,18 @@
                     <div class="card-header">{{ __('Formulario') }}</div>
 
                     <div class="card-body">
-                        <form method="post" action="{{ route('form.store') }}" onsubmit="alert('you submitted the form');">
+                        <form method="post" action="{{ route('form.store') }}">
                             {{ csrf_field() }}
                             <div class="form-group">
                                 <label for="from_name">Nombre:</label>
-                                <input type="text" name="from_name" placeholder="Tu nombre aquí" value="{{ old('first_name') }}" class="form-control">
+                                <input type="text" name="from_name" placeholder="Tu nombre aquí" value="{{ Auth::user()->name}} {{ Auth::user()->surname}}" class="form-control">
                             </div>
                             <div class="form-group">
                                 <label for="to_name">Destinatario:</label>
-                                <input type="text" name="to_name" placeholder="Destinatario aquí" value="{{ old('last_name') }}" class="form-control">
+                                <input type="text" name="to_name" placeholder="Destinatario aquí" value="{{ old('to_name') }}" class="form-control">
                             </div>
                             <div class="form-group">
-                                <label for="date">Fecha:(Click)</label>
+                                <label for="date">Fecha:    (Click)</label>
                                 <input type="date" name="date" id="date" placeholder="Fecha" value="{{ today()}}" class="form-control">
                             </div>
                             <div class="form-group">

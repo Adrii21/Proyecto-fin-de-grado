@@ -5,6 +5,8 @@ namespace App\Http\Requests;
 use App\Models\Form;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Validation\Rule;
+use Illuminate\Support\Facades\Auth;
 
 class CreateMissingCallRequest extends FormRequest
 {
@@ -37,7 +39,10 @@ class CreateMissingCallRequest extends FormRequest
             'mail' => 'email|required',
             'mail2' => 'email|required',
             'observaciones' => 'nullable',
-
+            'user_id' => [
+                'nullable', 'present',
+                Rule::exists('users', 'id')->whereNull('deleted_at')
+            ],
         ];
     }
 
@@ -56,6 +61,7 @@ class CreateMissingCallRequest extends FormRequest
                'mail' => $this->mail,
                'mail2' => $this->mail2,
                'observaciones' => $this->observaciones,
+               'user_id' => $this->user_id
            ]);
         });
     }

@@ -15,8 +15,11 @@ class FormController extends Controller
 
     public function store(CreateMissingCallRequest $request)
     {
+
         $request->createCall();
 
         return redirect()->route('home');
     }
+
+
 }

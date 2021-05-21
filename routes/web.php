@@ -22,6 +22,9 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/home/cita', [App\Http\Controllers\FormController::class, 'index'])->name('form.index');
 Route::post('/home/cita', [App\Http\Controllers\FormController::class, 'store'])->name('form.store');
-Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
-//Route::get('/home/{call}/editar', [App\Http\Controllers\FormController::class, 'index'])->name('edit');
-Route::delete('/dashboard/{id}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('destroy');
+Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
+Route::get('/home/llamadas', [\App\Http\Controllers\UserController::class, 'show'])->name('user.calls');
+Route::get('/dashboard/{id}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('destroy');
+Route::get('home/usuario', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');
+Route::get('/home/profesor', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+Route::get('home/profesor/{id}', [\App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');

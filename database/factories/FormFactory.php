@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Form;
-use App\Models\Model;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class FormFactory extends Factory
@@ -33,7 +32,8 @@ class FormFactory extends Factory
             'tlf2' => 600000001,
             'mail' => $this->faker->email,
             'mail2' => $this->faker->email,
-            'observaciones' => $this->faker->sentence
+            'observaciones' => $this->faker->sentence,
+            'user_id' => 2
         ];
     }
 }
