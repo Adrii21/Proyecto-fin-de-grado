@@ -15,7 +15,7 @@ class FormSeeder extends Seeder
      */
     public function run()
     {
-        Form::factory()->times(5)->create();
+        Form::factory()->times(10)->create();
     }
 
 }

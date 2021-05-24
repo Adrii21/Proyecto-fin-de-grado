@@ -28,7 +28,7 @@ class FormTable extends Migration
             $table->string('mail2');
             $table->string('observaciones')->nullable();
 
-            $table->foreignId('user_id')->references('id')->on('users');
+            $table->foreignIdFor(\App\Models\User::class)->constrained();
 
             $table->timestamps();
             $table->softDeletes();

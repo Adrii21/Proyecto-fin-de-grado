@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\UpdateMissingCallRequest;
 use App\Models\Form;
 
 class AdminController extends Controller
@@ -10,7 +11,7 @@ class AdminController extends Controller
     {
         $calls = Form::query()
             ->orderByDesc('date')
-            ->paginate(10);
+            ->paginate(15);
 
         return view('admin.index', [
             'calls' => $calls,

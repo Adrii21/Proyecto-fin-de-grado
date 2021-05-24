@@ -17,7 +17,7 @@ class UserController extends Controller
     {
         $calls = Form::query()
             ->orderByDesc('date')
-            ->paginate(10);
+            ->paginate(15);
 
         return view('user.forms', [
             'calls' => $calls,

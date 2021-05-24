@@ -32,8 +32,7 @@ class FormFactory extends Factory
             'tlf2' => 600000001,
             'mail' => $this->faker->email,
             'mail2' => $this->faker->email,
-            'observaciones' => $this->faker->sentence,
-            'user_id' => 2
+            'user_id' => rand(1, 3),
         ];
     }
 }

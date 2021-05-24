@@ -4,10 +4,9 @@ namespace App\Http\Requests;
 
 use App\Models\Form;
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rule;
 
-class CreateMissingCallRequest extends FormRequest
+class UpdateMissingCallRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -45,23 +44,21 @@ class CreateMissingCallRequest extends FormRequest
         ];
     }
 
-    public function createCall()
+    public function updateCall(Form $form)
     {
-        DB::transaction(function () {
-           Form::create([
-               'from_name' => $this->from_name,
-               'to_name' => $this->to_name,
-               'date' => $this->date,
-               'time' => $this->time,
-               'asunto' => $this->asunto,
-               'contact' => $this->contact,
-               'tlf' => $this->tlf,
-               'tlf2' => $this->tlf2,
-               'mail' => $this->mail,
-               'mail2' => $this->mail2,
-               'observaciones' => $this->observaciones,
-               'user_id' => $this->user_id
-           ]);
-        });
+        $form->fill([
+            'from_name' => $this->from_name,
+            'to_name' => $this->to_name,
+            'date' => $this->date,
+            'time' => $this->time,
+            'asunto' => $this->asunto,
+            'contact' => $this->contact,
+            'tlf' => $this->tlf,
+            'tlf2' => $this->tlf2,
+            'mail' => $this->mail,
+            'mail2' => $this->mail2,
+            'observaciones' => $this->observaciones,
+            'user_id' => $this->user_id
+        ]);
     }
 }
