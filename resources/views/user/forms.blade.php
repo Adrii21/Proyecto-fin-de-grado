@@ -16,7 +16,6 @@
                             <table class="table table-sm">
                                 <th>
                                     <tr class="text-light">
-                                        <th>Número</th>
                                         <th>Fecha y hora</th>
                                         <th>Receptor</th>
                                         <th>Destinatario</th>

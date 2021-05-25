@@ -14,7 +14,10 @@
                         </div>
                     @endif
                         <a class="text-white btn btn-primary" href="{{ route('form.index') }}">Establecer hora de la llamada</a><br><br>
-                        <a class="text-white btn btn-success" href="{{ route('admin.index') }}">Administrador</a><br><br>
+
+                        @can('admin')
+                            <a class="text-white btn btn-success" href="{{ route('admin.index') }}">Administrador</a><br><br>
+                        @endcan
                         <a class="text-white btn btn-info" href="{{ route('user.show') }}">Mi perfil</a><br><br>
                         <a class="text-white btn btn-success" href="{{ route('user.index') }}">Mis llamadas</a><br><br>
                 </div>

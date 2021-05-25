@@ -20,6 +20,7 @@ class FormController extends Controller
 
         return redirect()->route('home');
     }
+
     public function edit(Form $form)
     {
         return view('formedit', compact('form'));

@@ -26,27 +26,23 @@ class UpdateMissingCallRequest extends FormRequest
     public function rules()
     {
         return [
-            'from_name' => 'string|required',
-            'to_name' => 'string|required',
-            'date' => 'date|required',
+            'from_name' => 'required',
+            'to_name' => 'required',
+            'date' => 'required',
             'time' => 'required',
-            'asunto' => 'string|required',
-            'contact' => 'string|required',
-            'tlf' => 'required|integer',
-            'tlf2' => 'integer|required',
-            'mail' => 'email|required',
-            'mail2' => 'email|required',
-            'observaciones' => 'nullable',
-            'user_id' => [
-                'nullable', 'present',
-                Rule::exists('users', 'id'),
-            ],
+            'asunto' => 'required',
+            'contact' => 'required',
+            'tlf' => 'required',
+            'tlf2' => 'nullable',
+            'mail' => 'email',
+            'mail2' => 'nullable',
+            'observaciones' => 'required',
         ];
     }
 
     public function updateCall(Form $form)
     {
-        $form->fill([
+        $form->update([
             'from_name' => $this->from_name,
             'to_name' => $this->to_name,
             'date' => $this->date,
@@ -58,7 +54,6 @@ class UpdateMissingCallRequest extends FormRequest
             'mail' => $this->mail,
             'mail2' => $this->mail2,
             'observaciones' => $this->observaciones,
-            'user_id' => $this->user_id
         ]);
     }
 }

@@ -34,9 +34,9 @@ class CreateMissingCallRequest extends FormRequest
             'asunto' => 'string|required',
             'contact' => 'string|required',
             'tlf' => 'required|integer',
-            'tlf2' => 'integer|required',
+            'tlf2' => 'integer|nullable',
             'mail' => 'email|required',
-            'mail2' => 'email|required',
+            'mail2' => 'email|nullable',
             'observaciones' => 'nullable',
             'user_id' => [
                 'nullable', 'present',

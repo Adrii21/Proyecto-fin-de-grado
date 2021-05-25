@@ -52,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="observaciones">Observaciones:</label>
-                                <textarea name="observaciones" cols="10" rows="3" class="form-control"></textarea>
+                                <input type="text" name="observaciones" placeholder="Observaciones" value="{{ old('observaciones') }}" class="form-control">
                             </div>
                             <input type="hidden" name="user_id" value="{{ Auth::user()->id}} " class="form-control">
 

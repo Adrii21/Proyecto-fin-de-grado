@@ -23,9 +23,9 @@ class FormTable extends Migration
             $table->string('asunto');
             $table->string('contact');
             $table->integer('tlf');
-            $table->integer('tlf2');
+            $table->integer('tlf2')->nullable();
             $table->string('mail');
-            $table->string('mail2');
+            $table->string('mail2')->nullable();
             $table->string('observaciones')->nullable();
 
             $table->foreignIdFor(\App\Models\User::class)->constrained();
