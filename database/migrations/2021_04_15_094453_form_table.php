@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\User;
 
 class FormTable extends Migration
 {
@@ -28,7 +29,7 @@ class FormTable extends Migration
             $table->string('mail2')->nullable();
             $table->string('observaciones')->nullable();
 
-            $table->foreignIdFor(\App\Models\User::class)->constrained();
+            $table->foreignIdFor(User::class)->constrained();
 
             $table->timestamps();
             $table->softDeletes();

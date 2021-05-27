@@ -26,10 +26,10 @@ Route::get('/home/{form}/editar', [App\Http\Controllers\FormController::class, '
 Route::put('/home/{form}', [\App\Http\Controllers\FormController::class, 'update'])->name('form.update');
 Route::get('home/{form}', [\App\Http\Controllers\FormController::class, 'show'])->name('form.show');
 
-Route::get('home/usuario', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');
+Route::get('home/usuario', [App\Http\Controllers\UserController::class, 'show'])->name('user.show');
 
 Route::get('/dashboard', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.index');
 Route::get('/dashboard/{id}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('destroy');
 
-Route::get('/home/profesor', [\App\Http\Controllers\UserController::class, 'index'])->name('user.index');
-Route::get('home/profesor/{id}', [\App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');
+Route::get('/home/profesor', [App\Http\Controllers\UserController::class, 'index'])->name('user.index');
+Route::get('home/profesor/{id}', [App\Http\Controllers\UserController::class, 'destroy'])->name('user.destroy');
