@@ -36,7 +36,7 @@ class RegisterUserTest extends TestCase
         ])
             ->assertRedirect('/');
 
-        $this->assertDatabaseHas('users', ['name' => 'Adrian']);
+        $this->assertDatabaseHas('user', ['name' => 'Adrian']);
     }
 
 }

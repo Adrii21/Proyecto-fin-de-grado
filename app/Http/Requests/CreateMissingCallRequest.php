@@ -40,7 +40,7 @@ class CreateMissingCallRequest extends FormRequest
             'observaciones' => 'nullable',
             'user_id' => [
                 'nullable', 'present',
-                Rule::exists('users', 'id'),
+                Rule::exists('user', 'id'),
             ],
         ];
     }

@@ -35,7 +35,7 @@ class UserController extends Controller
 
         $call->forceDelete();
 
-        return redirect()->route('admin', [
+        return redirect()->route('dashbooard', [
             'id' => $id
         ]);
     }

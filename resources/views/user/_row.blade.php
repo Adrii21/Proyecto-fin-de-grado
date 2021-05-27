@@ -18,7 +18,6 @@
         <span class="note">{{ $call->created_at->format('d/m/Y') }}</span>
     </td>
     <td class="text-right">
-        <a href="{{ route ('form.edit', $call) }}" class="btn-outline-info btn-sm"><span>Editar</span></a>
         <a href="{{ route ('user.destroy', $call) }}" class="btn-outline-warning btn-sm"><span>Eliminar</span></a>
     </td>
         @endif

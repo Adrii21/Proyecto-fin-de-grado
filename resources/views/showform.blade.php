@@ -20,8 +20,20 @@
                         <h4>Destinatario: </h4><br>
                         <p> {{$form->from_name}}</p>
 
-                        <h4> </h4>
-                        <p>{{  }}</p>
+                        <h4>Fecha y hora: </h4>
+                        <p>{{$form->date}} {{ $form->time }} </p>
+
+                        <h4>Contacto:</h4>
+                            <p>{{$form->contact}}</p>
+
+                        <h4>Teléfono(s):</h4>
+                            <p>{{$form->tlf}} {{$form->tlf2}}</p>
+
+                            <h4>Correo(s):</h4>
+                            <p>{{$form->mail}} {{$form->mail2}}</p>
+
+
+                            <a href="{{ route('home') }}" class="align-self-end btn btn-outline-light">Regresar al menu</a>
 
                     </div>
                 </div>

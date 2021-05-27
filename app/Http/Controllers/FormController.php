@@ -21,6 +21,11 @@ class FormController extends Controller
         return redirect()->route('home');
     }
 
+    public function show(Form $form)
+    {
+        return view('showform', compact('form'));
+    }
+
     public function edit(Form $form)
     {
         return view('formedit', compact('form'));
@@ -30,6 +35,6 @@ class FormController extends Controller
     {
         $request->updateCall($form);
 
-        return redirect()->route('home');
+        return view('showform', compact('form'));
     }
 }
