@@ -4,8 +4,8 @@
         {{$call->date}}
         <span class="note">{{ $call->time }}</span>
     </td>
-    <td>{{ $call->to_name }}</td>
     <td>{{ $call->from_name }}</td>
+    <td>{{ $call->to_name }}</td>
     <td>{{ $call->asunto }}</td>
     <td>{{ $call->contact }}</td>
     <td>{{ $call->tlf }}</td>
@@ -17,6 +17,7 @@
         <span class="note">{{ $call->created_at->format('d/m/Y') }}</span>
     </td>
     <td class="text-right">
+        <a href="{{ route ('form.show', $call) }}" class="btn-outline-success btn-sm"><span>Ver</span></a>
         <a href="{{ route ('form.edit', $call) }}" class="btn-outline-info btn-sm"><span>Editar</span></a>
 
         <a href="{{ route ('destroy', $call) }}" class="btn-outline-warning btn-sm"><span>Eliminar</span></a>

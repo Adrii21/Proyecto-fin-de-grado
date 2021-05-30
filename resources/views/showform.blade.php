@@ -14,10 +14,10 @@
                             </div>
                         @endif
 
-                        <h4>Nombre: </h4><br>
+                        <h4>Nombre: </h4>
                         <p>{{ $form->from_name}}</p>
 
-                        <h4>Destinatario: </h4><br>
+                        <h4>Destinatario: </h4>
                         <p> {{$form->from_name}}</p>
 
                         <h4>Fecha y hora: </h4>
@@ -31,6 +31,9 @@
 
                             <h4>Correo(s):</h4>
                             <p>{{$form->mail}} {{$form->mail2}}</p>
+
+                            <h4>Observaciones:</h4>
+                            <p>{{$form->observaciones}}</p>
 
 
                             <a href="{{ route('home') }}" class="align-self-end btn btn-outline-light">Regresar al menu</a>

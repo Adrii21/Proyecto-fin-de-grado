@@ -16,9 +16,9 @@ class DatabaseSeeder extends Seeder
     {
         $this->truncateTables(['users', 'forms', 'roles']);
 
+        $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(FormSeeder::class);
-        $this->call(RoleSeeder::class);
     }
 
     public function truncateTables(array $tables)

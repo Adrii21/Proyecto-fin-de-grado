@@ -5,8 +5,8 @@
         <span class="note">{{ $call->time }}</span>
     </td>
 
-    <td>{{ $call->to_name }}</td>
     <td>{{ $call->from_name }}</td>
+    <td>{{ $call->to_name }}</td>
     <td>{{$call->asunto}}</td>
     <td>{{ $call->contact }}</td>
     <td>{{ $call->tlf }}</td>

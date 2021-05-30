@@ -58,9 +58,7 @@ class RegisterController extends Controller
             'group' => ['required', 'string', 'max:1'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:4', 'confirmed'],
-            'role' => ['required',
-                Rule::in(Role::getList())
-            ],
+            'role' => ['required'],
         ]);
     }
 

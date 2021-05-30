@@ -12,7 +12,7 @@
                         </div>
                     @endif
                     @if($calls->isNotEmpty())
-                        <div class="table-responsive-lg">
+                        <div class="table-responsive-xl">
                             <table class="table table-sm">
                                 <th>
                                     <tr class="text-light">

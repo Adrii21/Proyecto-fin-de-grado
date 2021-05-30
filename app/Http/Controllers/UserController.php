@@ -12,16 +12,16 @@ class UserController extends Controller
     {
         $calls = Form::query()
             ->orderByDesc('date')
-            ->paginate(15);
+            ->paginate();
 
         return view('user.forms', [
             'calls' => $calls,
         ]);
     }
 
-    public function show(User $user)
+    public function show()
     {
-        return view('user.index', compact('user'));
+        return view('user.index');
     }
 
     public function destroy($id)
@@ -30,9 +30,10 @@ class UserController extends Controller
 
         $call->forceDelete();
 
-        return redirect()->route('dashbooard', [
+        return redirect()->route('user.forms', [
             'id' => $id
         ]);
     }
+
 
 }

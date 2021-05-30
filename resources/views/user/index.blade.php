@@ -14,14 +14,14 @@
                             </div>
                         @endif
 
-                        <h4>Usuario: </h4><br>
-                            <p>{{ Auth::user()->name}} {{ Auth::user()->surname}}</p>
+                        <h3>Usuario: </h3>
+                            <h4 class="text-right">{{ Auth::user()->name}} {{ Auth::user()->surname}}</h4><br>
 
-                        <h4>Correo: </h4><br>
-                        <p> {{ Auth::user()->email }}</p>
+                        <h3>Correo: </h3>
+                        <h4 class="text-right"> {{ Auth::user()->email }}</h4><br>
 
-                        <h4>Fecha de creación:</h4>
-                        <p>{{ Auth::user()->created_at}}</p>
+                        <h3>Fecha de creación:</h3>
+                        <h4 class="text-right"> {{ Auth::user()->created_at}}</h4>
 
                     </div>
                 </div>

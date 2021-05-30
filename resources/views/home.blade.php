@@ -15,9 +15,10 @@
                     @endif
                         <a class="text-white btn btn-primary" href="{{ route('form.index') }}">Establecer hora de la llamada</a><br><br>
 
+                        @can('admin.index')
                             <a class="text-white btn btn-success" href="{{ route('admin.index') }}">Panel de control</a><br><br>
+                        @endcan
 
-                        <a class="text-white btn btn-secondary" href="{{ route('user.show') }}">Mi perfil</a><br><br>
                         <a class="text-white btn btn-info" href="{{ route('user.index') }}">Mis llamadas</a><br><br>
                 </div>
             </div>
