@@ -14,12 +14,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/gijgo@1.9.10/css/gijgo.min.css" rel="stylesheet">
-
 </head>
 <body class="bg-dark text-white">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-top" style="background-color: #e3f2fd;">
-            <div class="container">
+            <div class="container bg-img">
                 <a class="navbar-brand text-white" href="{{ url('/home') }}">
                     Llamadas no contestadas
                 </a>

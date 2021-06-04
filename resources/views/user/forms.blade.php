@@ -12,19 +12,17 @@
                         </div>
                     @endif
                     @if($calls->isNotEmpty())
-                        <div class="table-responsive-xl">
+                        <div class="table-responsive">
                             <table class="table table-sm">
                                 <th>
-                                    <tr class="text-light">
+                                    <tr class="text-white">
                                         <th>Fecha y hora</th>
                                         <th>Receptor</th>
                                         <th>Destinatario</th>
-                                        <th>Asunto</th>
                                         <th>Persona de contacto</th>
-                                        <th>Tlf1</th>
-                                        <th>Tlf2</th>
-                                        <th>Mail1</th>
-                                        <th>Mail2</th>
+                                        <th>Asunto</th>
+                                        <th>Tlf</th>
+                                        <th>Mail</th>
                                         <th>Observaciones</th>
                                         <th>Fecha añadida</th>
                                         <th class="text-right">Acciones</th>

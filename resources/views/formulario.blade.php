@@ -7,7 +7,7 @@
                 <div class="card bg-dark">
                     <div class="card-header">{{ __('Formulario') }}</div>
 
-                    <div class="card-body">
+                    <div class="card-body bg-secondary">
                         <form method="post" action="{{ route('form.store') }}">
                             {{ csrf_field() }}
                             <div class="form-group">

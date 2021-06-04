@@ -1,17 +1,18 @@
-<tr>
-    <td class="text-muted">{{ $call->id }}</td>
+<tr class="text-light">
     <td class="row">
         {{$call->date}}
         <span class="note">{{ $call->time }}</span>
     </td>
-    <td>{{ $call->from_name }}</td>
+    <td class="text-center">{{ $call->from_name }}</td>
     <td>{{ $call->to_name }}</td>
     <td>{{ $call->asunto }}</td>
     <td>{{ $call->contact }}</td>
-    <td>{{ $call->tlf }}</td>
-    <td>{{ $call->tlf2 }}</td>
-    <td>{{ $call->mail }}</td>
-    <td>{{ $call->mail2 }}</td>
+    <td>{{ $call->tlf }}
+        <span class="note">{{ $call->tlf2 }}</span>
+    </td>
+    <td>{{ $call->mail }}
+        <span class="note">{{$call->mail2}}</span>
+    </td>
     <td>{{ $call->observaciones }}</td>
     <td>
         <span class="note">{{ $call->created_at->format('d/m/Y') }}</span>

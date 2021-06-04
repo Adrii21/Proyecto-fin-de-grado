@@ -24,16 +24,19 @@
                         <p>{{$form->date}} {{ $form->time }} </p>
 
                         <h4>Contacto:</h4>
-                            <p>{{$form->contact}}</p>
+                        <p>{{$form->contact}}</p>
+
+                        <h4>Asunto: </h4>
+                        <p> {{$form->asunto}}</p>
 
                         <h4>Teléfono(s):</h4>
-                            <p>{{$form->tlf}} {{$form->tlf2}}</p>
+                        <p>{{$form->tlf}} {{$form->tlf2}}</p>
 
-                            <h4>Correo(s):</h4>
-                            <p>{{$form->mail}} {{$form->mail2}}</p>
+                        <h4>Correo(s):</h4>
+                        <p>{{$form->mail}} {{$form->mail2}}</p>
 
-                            <h4>Observaciones:</h4>
-                            <p>{{$form->observaciones}}</p>
+                        <h4>Observaciones:</h4>
+                        <p>{{$form->observaciones}}</p>
 
 
                             <a href="{{ route('home') }}" class="align-self-end btn btn-outline-light">Regresar al menu</a>
